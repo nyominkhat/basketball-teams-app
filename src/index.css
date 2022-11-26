@@ -125,8 +125,10 @@ li {
   font-weight: bold;
 }
 
-.nav-links a {
+.nav-links {
   padding: 0 10px;
+  display: flex;
+  gap: 1rem;
 }
 
 .two-column {
