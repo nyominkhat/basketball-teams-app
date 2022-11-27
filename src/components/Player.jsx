@@ -1,17 +1,18 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import usePlayer from "../hooks/usePlayer";
+import Loading from "./Loading";
 
 const Player = () => {
   const { name } = useParams();
   const { response: player, loading } = usePlayer(name);
   // console.log(player);
   if (loading === true) {
-    return null;
+    return <Loading />;
   }
 
   if (!player) {
-    return null;
+    return <Loading />;
   }
 
   return (

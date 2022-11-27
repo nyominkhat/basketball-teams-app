@@ -21,13 +21,31 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/players" element={<Players />}>
               <Route path=":name" element={<Player />} />
+              <Route
+                path=""
+                element={
+                  <div className="sidebar-instruction">Select a player</div>
+                }
+              />
             </Route>
             <Route path="/teams" element={<Teams />}>
               <Route path=":teamId" element={<Team />} />
+              <Route
+                path=""
+                element={
+                  <div className="sidebar-instruction">Select a Team</div>
+                }
+              />
             </Route>
             <Route path="/:teamId" element={<TeamPage />} />
             <Route path="/:teamId/articles" element={<Articles />}>
               <Route path=":articleId" element={<Article />} />
+              <Route
+                path=""
+                element={
+                  <div className="sidebar-instruction">Select a Article</div>
+                }
+              />
             </Route>
           </Routes>
         </div>

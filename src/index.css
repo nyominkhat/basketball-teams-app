@@ -301,7 +301,7 @@ li {
   height: 0;
   width: 0;
   padding: 7px;
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--rose);
   border-right-color: var(--black);
   border-radius: 22px;
   animation: rotate 1s infinite linear;

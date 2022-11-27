@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useSearchParams, Outlet } from "react-router-dom";
 import usePlayerNames from "../hooks/usePlayerNames";
+import Loading from "./Loading";
 import SideBar from "./SideBar";
 
 const Players = () => {
@@ -10,7 +11,7 @@ const Players = () => {
   const { response: name, loading } = usePlayerNames(team);
 
   if (loading === true) {
-    return null;
+    return <Loading />;
   }
 
   return (

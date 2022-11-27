@@ -1,12 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import useTeamNames from "../hooks/useTeamNames";
+import Loading from "./Loading";
 import SideBar from "./SideBar";
 
 const Teams = () => {
   const { response: team, loading } = useTeamNames();
 
-  if (loading === true) return null;
+  if (loading === true) return <Loading />;
 
   return (
     <div className="container two-column">
