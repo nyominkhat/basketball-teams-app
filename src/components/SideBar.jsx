@@ -4,7 +4,7 @@ import { slugify } from "../utils";
 
 function SideBar({ title, list }) {
   return (
-    <div>
+    <div style={{ width: "50%" }}>
       <h3 className="header">{title}</h3>
       <ul className="sidebar-list">
         {list.map((item) => (
@@ -19,7 +19,8 @@ function SideBar({ title, list }) {
 
 function CustomLink({ to, children }) {
   const location = useLocation();
-  const isMatch = location.pathname.split("/")[2] === to;
+  const splited = location.pathname.split("/");
+  const isMatch = splited[splited.length - 1] === to;
   // const isMatch = location.pathname === to;
   // const isMatch = useMatch(to);
 
