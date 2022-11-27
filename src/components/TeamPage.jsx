@@ -4,7 +4,7 @@ import useTeamNames from "../hooks/useTeamNames";
 import useTeam from "../hooks/useTeam";
 import useTeamsArticles from "../hooks/useTeamsArticles";
 import TeamLogo from "./TeamLogo";
-import { slugify } from "../utils"; 
+import { slugify } from "../utils";
 
 function useTeamPageData(teamId) {
   const { response: teamNames, loading: loadingTeamNames } = useTeamNames();
@@ -22,7 +22,6 @@ function useTeamPageData(teamId) {
 
 const TeamPage = () => {
   const { teamId } = useParams();
-
   const { teamNames, articles, team, loading } = useTeamPageData(teamId);
 
   if (loading === true) return <p className="text-center"> loading ... </p>;
